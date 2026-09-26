@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Virtual environments
+*.egg-info/
+
+# Chroma databases
+data/chroma/
+data/chroma_semantic/
+
+# Generated caches
+.cache/
+.pytest_cache/
+
+# Hugging Face / model caches
+huggingface/

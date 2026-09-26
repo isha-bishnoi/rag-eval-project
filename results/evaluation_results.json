@@ -1,0 +1,28 @@
+{
+  "benchmark": {
+    "questions": 50,
+    "embedding_model": "all-MiniLM-L6-v2"
+  },
+  "generation_config": {
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "max_new_tokens": 100,
+    "top_k_chunks": 5
+  },
+  "retrieval": {
+    "hit_at_1": 0.88,
+    "hit_at_3": 0.98,
+    "hit_at_5": 0.98
+  },
+  "generation": {
+    "average_keyword_score": 0.4858797738202032,
+    "average_semantic_score": 0.7323921912908554,
+    "average_key_point_score": 0.5083333333333333,
+    "average_factuality_score": 0.8
+  },
+  "failed_retrieval_questions": [
+    26
+  ],
+  "failed_factuality_questions": [
+    49
+  ]
+}

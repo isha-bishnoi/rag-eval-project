@@ -1,0 +1,6 @@
+requests
+beautifulsoup4
+sentence-transformers
+chromadb
+rank-bm25
+transformers

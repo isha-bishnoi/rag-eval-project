@@ -1,0 +1,420 @@
+[
+  {
+    "id": 1,
+    "category": "path_parameters",
+    "question": "What is a path parameter in FastAPI?",
+    "answer": "A path parameter is a variable part of the URL path that FastAPI extracts and passes to the path operation function.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/path-params/"
+  },
+  {
+    "id": 2,
+    "category": "path_parameters",
+    "question": "How do you declare a path parameter in a FastAPI route?",
+    "answer": "A path parameter is declared in the route path using curly braces, such as /items/{item_id}, and the corresponding function parameter uses the same name.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/path-params/",
+    "key_points": [
+      ["curly braces", "curly brackets"],
+      ["same parameter name", "matching parameter name"],
+      ["{item_id}", "path parameter"]
+    ]
+  },
+  {
+    "id": 3,
+    "category": "path_parameters",
+    "question": "How does FastAPI convert and validate the type of a path parameter?",
+    "answer": "FastAPI uses the Python type annotation of the path operation function parameter to convert the incoming value to that type and validate it.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/path-params/"
+  },
+  {
+    "id": 4,
+    "category": "query_parameters",
+    "question": "What is a query parameter in FastAPI?",
+    "answer": "A query parameter is a function parameter that is not part of the route path. FastAPI automatically interprets it as a query parameter.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/query-params/"
+  },
+  {
+    "id": 5,
+    "category": "query_parameters",
+    "question": "Where are query parameters located in a URL?",
+    "answer": "Query parameters are key-value pairs that appear after the question mark in a URL.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/query-params/"
+  },
+  {
+    "id": 6,
+    "category": "query_parameters",
+    "question": "Can query parameters have default values in FastAPI?",
+    "answer": "Yes. Query parameters can have default values, which makes them optional when calling the API.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/query-params/"
+  },
+  {
+    "id": 7,
+    "category": "first_steps",
+    "question": "What is FastAPI used for?",
+    "answer": "FastAPI is a web framework for building APIs with Python.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/first-steps/",
+    "key_points": [
+      ["web framework"],
+      ["building APIs", "build APIs", "API development"],
+      ["Python"]
+    ]
+  },
+  {
+    "id": 8,
+    "category": "first_steps",
+    "question": "How do you create a FastAPI application?",
+    "answer": "A FastAPI application can be created by importing FastAPI and creating an instance with app = FastAPI().",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/first-steps/"
+  },
+  {
+    "id": 9,
+    "category": "first_steps",
+    "question": "How do you define a GET endpoint in FastAPI?",
+    "answer": "A GET endpoint is defined using the @app.get() decorator on a path operation function.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/first-steps/"
+  },
+  {
+    "id": 10,
+    "category": "first_steps",
+    "question": "What is OpenAPI used for in FastAPI?",
+    "answer": "OpenAPI defines the API schema, including information about the available paths, parameters, and data sent and received by the API.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/first-steps/",
+    "key_points": [
+      ["API schema", "API specification"],
+      ["paths", "API paths"],
+      ["parameters", "API parameters"]
+    ]
+  },
+  {
+    "id": 11,
+    "category": "request_body",
+    "question": "How do you declare a request body in FastAPI?",
+    "answer": "A request body can be declared by defining a parameter with a Pydantic model type in the path operation function.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/body/"
+  },
+  {
+    "id": 12,
+    "category": "request_body",
+    "question": "What does FastAPI use Pydantic models for?",
+    "answer": "FastAPI uses Pydantic models to define the structure of request data and provide data validation and conversion.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/body/"
+  },
+  {
+    "id": 13,
+    "category": "request_body",
+    "question": "Can a FastAPI endpoint receive both path parameters and a request body?",
+    "answer": "Yes. A FastAPI path operation can receive path parameters along with a request body defined using a Pydantic model.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/body/"
+  },
+  {
+    "id": 14,
+    "category": "body_fields",
+    "question": "How can you add additional validation or metadata to fields in a FastAPI request body?",
+    "answer": "You can use Pydantic's Field to provide additional validation constraints and metadata for model fields.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/body-fields/"
+  },
+  {
+    "id": 15,
+    "category": "multiple_body_params",
+    "question": "Can a FastAPI endpoint receive multiple body parameters?",
+    "answer": "Yes. FastAPI can receive multiple body parameters and use their type declarations to determine the expected request body structure.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/body-multiple-params/"
+  },
+  {
+    "id": 16,
+    "category": "nested_models",
+    "question": "Can Pydantic models used by FastAPI contain nested models?",
+    "answer": "Yes. Pydantic models can contain other Pydantic models as fields, allowing FastAPI to handle nested JSON structures.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/body-nested-models/"
+  },
+  {
+    "id": 17,
+    "category": "response_model",
+    "question": "What is a response model in FastAPI?",
+    "answer": "A response model is a Pydantic model declared for an endpoint's response that defines and validates the structure of the returned data.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/response-model/"
+  },
+  {
+    "id": 18,
+    "category": "response_model",
+    "question": "Why would you use a response model in FastAPI?",
+    "answer": "A response model can validate the returned data, document the response schema, and filter the response to the fields defined by the model.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/response-model/"
+  },
+  {
+    "id": 19,
+    "category": "status_codes",
+    "question": "How do you specify an HTTP status code for a FastAPI path operation?",
+    "answer": "You can specify the status code using the status_code parameter of the path operation decorator, such as @app.post(..., status_code=201).",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/response-status-code/"
+  },
+  {
+  "id": 20,
+  "category": "status_codes",
+  "question": "What does HTTP status code 201 mean in FastAPI?",
+  "answer": "HTTP status code 201 means that a new resource was successfully created.",
+  "source_url": "https://fastapi.tiangolo.com/tutorial/response-status-code/",
+  "key_points": [
+    ["201"],
+    ["created", "creation"],
+    ["resource", "new resource"]
+  ],
+  "must_not_contain": [
+    "response has a body"
+  ]
+},
+  {
+    "id": 21,
+    "category": "forms",
+    "question": "How does FastAPI receive form data?",
+    "answer": "FastAPI receives form data using the Form class for parameters declared in a path operation function.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/request-forms/"
+  },
+  {
+    "id": 22,
+    "category": "files",
+    "question": "How do you receive an uploaded file in FastAPI?",
+    "answer": "An uploaded file can be declared using File or UploadFile in a FastAPI path operation.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/request-files/"
+  },
+  {
+    "id": 23,
+    "category": "errors",
+    "question": "How do you raise an HTTP error in FastAPI?",
+    "answer": "You can raise an HTTPException with the appropriate status code and detail message.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/handling-errors/"
+  },
+  {
+    "id": 24,
+    "category": "dependencies",
+    "question": "What is dependency injection in FastAPI?",
+    "answer": "Dependency injection allows a path operation function to declare dependencies that FastAPI automatically calls and provides with their results.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/dependencies/"
+  },
+  {
+    "id": 25,
+    "category": "dependencies",
+    "question": "How do you declare a dependency in a FastAPI path operation?",
+    "answer": "A dependency is commonly declared using Depends in a function parameter, such as parameter: Type = Depends(dependency).",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/dependencies/",
+    "key_points": [
+      ["Depends"],
+      ["function parameter", "parameter"]
+    ],
+    "must_not_contain": [
+  "Depends decorator",
+  "@depends"
+]
+  },
+  {
+    "id": 26,
+    "category": "dependencies",
+    "question": "Can a FastAPI dependency have its own dependencies?",
+    "answer": "Yes. A FastAPI dependency can declare other dependencies, creating a dependency chain that FastAPI resolves automatically.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/dependencies/sub-dependencies/"
+  },
+  {
+    "id": 27,
+    "category": "dependencies",
+    "question": "Can a class be used as a dependency in FastAPI?",
+    "answer": "Yes. A class can be used as a dependency by passing the class to Depends, allowing FastAPI to create an instance and provide it to the path operation.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/dependencies/classes-as-dependencies/"
+  },
+  {
+    "id": 28,
+    "category": "dependencies",
+    "question": "What is the purpose of yield in a FastAPI dependency?",
+    "answer": "A dependency using yield can provide a value to the path operation and then execute cleanup code after the response or operation is completed.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-with-yield/"
+  },
+  {
+    "id": 29,
+    "category": "security",
+    "question": "How does FastAPI support security schemes?",
+    "answer": "FastAPI provides security utilities that integrate with OpenAPI and allow authentication and authorization mechanisms to be declared as dependencies.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/security/"
+  },
+  {
+    "id": 30,
+    "category": "security",
+    "question": "What is OAuth2PasswordBearer used for in FastAPI?",
+    "answer": "OAuth2PasswordBearer is used to define an OAuth2 bearer-token security scheme and obtain the token from the Authorization header of incoming requests.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/security/first-steps/",
+    "key_points": [
+      ["OAuth2 bearer", "OAuth2PasswordBearer", "bearer token"],
+      ["Authorization header"],
+      ["token", "bearer token"]
+    ]
+  },
+  {
+    "id": 31,
+    "category": "security",
+    "question": "Where is a bearer token normally sent in an HTTP request?",
+    "answer": "A bearer token is normally sent in the Authorization header using the Bearer authentication scheme.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/security/first-steps/"
+  },
+  {
+    "id": 32,
+    "category": "security",
+    "question": "What is the purpose of a JWT in the FastAPI OAuth2 example?",
+    "answer": "A JWT can be used to securely represent information such as the authenticated user and can be signed so that the server can verify its integrity.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/"
+  },
+  {
+    "id": 33,
+    "category": "security",
+    "question": "Why should passwords not be stored as plain text?",
+    "answer": "Passwords should not be stored as plain text because anyone who gains access to the stored data would be able to directly read the users' passwords. Passwords should instead be securely hashed.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/"
+  },
+  {
+    "id": 34,
+    "category": "cors",
+    "question": "What does CORS control in a web application?",
+    "answer": "CORS controls which origins are allowed to make requests to an application from a browser.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/cors/"
+  },
+  {
+    "id": 35,
+    "category": "cors",
+    "question": "How do you configure CORS in FastAPI?",
+    "answer": "CORS can be configured by adding CORSMiddleware to the FastAPI application and specifying options such as allowed origins, methods, headers, and credentials.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/cors/",
+    "key_points": [
+      ["CORSMiddleware"],
+      ["allowed origins", "allow_origins"],
+      ["methods", "allow_methods"],
+      ["headers", "allow_headers"]
+    ]
+  },
+  {
+    "id": 36,
+    "category": "middleware",
+    "question": "What is middleware in FastAPI?",
+    "answer": "Middleware is code that runs for requests before they reach the path operation and for responses before they are returned to the client.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/middleware/"
+  },
+  {
+    "id": 37,
+    "category": "middleware",
+    "question": "How do you add custom middleware to a FastAPI application?",
+    "answer": "Custom middleware can be added using the app.middleware decorator with the appropriate HTTP method, such as @app.middleware('http').",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/middleware/"
+  },
+  {
+    "id": 38,
+    "category": "background_tasks",
+    "question": "What are background tasks used for in FastAPI?",
+    "answer": "Background tasks allow work to be performed after returning a response to the client, which is useful for operations such as sending notifications or processing data.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/background-tasks/"
+  },
+  {
+    "id": 39,
+    "category": "background_tasks",
+    "question": "How do you add a background task to a FastAPI endpoint?",
+    "answer": "A BackgroundTasks parameter can be declared in the path operation function, and tasks can be added using its add_task method.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/background-tasks/"
+  },
+  {
+    "id": 40,
+    "category": "bigger_applications",
+    "question": "Why would you split a FastAPI application into multiple files?",
+    "answer": "Splitting a FastAPI application into multiple files helps organize larger applications by separating related path operations and functionality into modules.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/bigger-applications/"
+  },
+  {
+    "id": 41,
+    "category": "bigger_applications",
+    "question": "What is APIRouter used for in FastAPI?",
+    "answer": "APIRouter is used to group related path operations and organize them into separate modules that can be included in the main FastAPI application.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/bigger-applications/"
+    
+  },
+  {
+    "id": 42,
+    "category": "metadata",
+    "question": "How can you provide metadata such as a title and description for a FastAPI application?",
+    "answer": "Metadata can be provided when creating the FastAPI application, using parameters such as title, description, version, and other OpenAPI metadata options.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/metadata/",
+    "key_points": [
+      ["FastAPI()"],
+      ["title"],
+      ["description"],
+      ["version"]
+    ],
+    "must_not_contain": [
+  "metadata parameter"
+]
+  },
+  {
+    "id": 43,
+    "category": "path_operation_configuration",
+    "question": "How can you add a summary or description to a FastAPI path operation?",
+    "answer": "A summary or description can be provided as parameters to the path operation decorator, such as summary and description.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/path-operation-configuration/"
+  },
+  {
+    "id": 44,
+    "category": "testing",
+    "question": "How can you test a FastAPI application?",
+    "answer": "A FastAPI application can be tested using TestClient together with a testing framework such as pytest.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/testing/"
+  },
+  {
+    "id": 45,
+    "category": "testing",
+    "question": "What does FastAPI's TestClient allow you to do?",
+    "answer": "TestClient allows you to send requests to a FastAPI application in tests and inspect the responses without running a live server.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/testing/"
+  },
+  {
+    "id": 46,
+    "category": "encoder",
+    "question": "What is jsonable_encoder used for in FastAPI?",
+    "answer": "jsonable_encoder converts data, including objects such as Pydantic models, into JSON-compatible Python data types.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/encoder/"
+  },
+  {
+    "id": 47,
+    "category": "extra_data_types",
+    "question": "Does FastAPI support Python types such as UUID and datetime?",
+    "answer": "Yes. FastAPI supports various standard Python data types such as UUID, datetime, date, time, and timedelta through its type handling and validation system.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/extra-data-types/"
+  },
+  {
+    "id": 48,
+    "category": "body_updates",
+    "question": "How can you update a Pydantic model using only the fields provided by the client?",
+    "answer": "You can use the model's model_dump method with exclude_unset=True to obtain only the fields that were explicitly provided by the client.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/body-updates/",
+    "key_points": [
+      ["model_dump", ".model_dump()"],
+      ["exclude_unset=True", "exclude_unset"],
+      ["provided by client", "explicitly provided"]
+    ],
+    "must_not_contain": [
+  "exclude default values"
+]
+  },
+  {
+    "id": 49,
+    "category": "body_updates",
+    "question": "What is the purpose of exclude_unset when updating data in FastAPI?",
+    "answer": "exclude_unset=True allows you to exclude fields that were not explicitly set by the client, which is useful when applying partial updates.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/body-updates/",
+    "key_points": [
+      ["exclude_unset=True", "exclude_unset"],
+      ["not explicitly set", "not provided"],
+      ["partial updates", "partial update"]
+    ],
+    "must_not_contain": [
+  "exclude default values"
+]
+  },
+  {
+    "id": 50,
+    "category": "query_parameters",
+    "question": "What happens when a FastAPI function parameter is not part of the path and has a default value?",
+    "answer": "FastAPI interprets it as a query parameter, and the default value is used when the parameter is not provided in the request.",
+    "source_url": "https://fastapi.tiangolo.com/tutorial/query-params/"
+  }
+]
