@@ -25,7 +25,7 @@ The benchmark evaluates both:
 
 * Document-level deduplication before reranking reduced retrieval performance.
 * Removing deduplication allowed the reranker to compare multiple chunks from the same document.
-* Cross-encoder reranking improved Hit@1 from 70% to 90% compared with vector retrieval with document-level deduplication.
+* Vector retrieval with reranking and without document-level deduplication improved Hit@1 from 70% to 90% compared with the vector + deduplication configuration.
 * The final hybrid pipeline retrieves the expected source for 49/50 benchmark questions at Hit@5.
 * Q26 remains unresolved at Hit@5 because several dependency-related documentation pages are highly similar.
 * Semantic chunking reduced the total number of chunks from 368 to 306.
@@ -93,7 +93,7 @@ The final generation experiment uses:
 * The smaller generation model sometimes produced technically incorrect answers despite receiving relevant documentation context.
 * Common generation errors included confusing path parameters with query parameters, misinterpreting `Depends`, confusing application metadata with OpenAPI tag metadata, and incorrectly explaining `exclude_unset`.
 * These results indicate that generation quality is currently a larger limitation than retrieval quality.
-* The current project therefore freezes the retrieval pipeline rather than adding additional retrieval techniques.
+* The current project freezes the retrieval pipeline at this stage rather than adding additional retrieval techniques.
 
 ---
 
