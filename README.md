@@ -1,5 +1,7 @@
 # RAG Evaluation Pipeline
 
+[![RAG Evaluation](https://github.com/isha-bishnoi/rag-eval-project/actions/workflows/eval.yml/badge.svg)](https://github.com/isha-bishnoi/rag-eval-project/actions/workflows/eval.yml)
+
 A production-style Retrieval-Augmented Generation (RAG) evaluation pipeline built over the official FastAPI documentation.
 
 The project focuses on **measuring and comparing RAG retrieval strategies**, rather than simply building a question-answering chatbot. It evaluates vector search, BM25, hybrid retrieval, reranking, chunking strategies, and generated answer quality using a controlled 50-question benchmark.
